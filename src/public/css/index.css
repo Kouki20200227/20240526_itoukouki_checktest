@@ -1,0 +1,110 @@
+.contact__content{
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+.section-title{
+    margin: 5dvh auto;
+    text-align: center;
+    color: rgb(158, 158, 158);
+}
+
+.contact-table{
+    text-align: left;
+}
+
+.check-table__inner{
+    width: 100%;
+}
+
+/* テーブルヘッダー共通 */
+.check-table__header{
+    width: 40%;
+}
+
+.check__header__item{
+    color: rgb(158, 158, 158);
+    margin: 3% 0;
+}
+
+.check__header--red{
+    color: red;
+}
+
+/* テーブルデータ共通 */
+.check-table__item{
+    width: 70%;
+}
+
+.check-form__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-form--input{
+    width: 100%;
+    border: none;
+    padding: 1dvh 3dvh;
+    background: rgb(232, 232, 232);
+}
+
+.check-form--warning{
+    color: red;
+}
+
+.check-form--warning li{
+    list-style: none;
+}
+
+/* テーブルデータ名前 */
+.check-form__name__item{
+    width: 45%;
+}
+
+/* テーブルデータ性別 */
+.check-form__gender{
+    display: flex;
+}
+
+.gender__item{
+    margin-right: 10%;
+}
+
+.gender__text{
+    color: rgb(158, 158, 158);
+}
+
+/* テーブルデータメールアドレス */
+
+/* テーブルデータ電話番号 */
+.check-form__tell__item{
+    width: 28%;
+    margin: 0;
+}
+
+/* テーブルデータ住所 */
+
+/* テーブルデータ建物名 */
+
+/* テーブルデータお問い合わせの種類 */
+.check-form__content__item{
+    width: 50%;
+}
+
+/* テーブルデータお問い合わせ内容 */
+/* .check-form__detail__item{
+} */
+
+
+/* 確認ボタン */
+.check-form__button {
+    margin: 5dvh auto;
+    text-align: center;
+}
+
+.check__button-submit{
+    padding: 1dvh 3dvh;
+    border: none;
+    background-color: rgb(158, 158, 158);
+    color: white;
+}

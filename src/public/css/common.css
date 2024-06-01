@@ -1,0 +1,33 @@
+.header{
+    border: none;
+    border-bottom: 1px solid rgb(160, 160, 160);
+}
+
+.header-form{
+    position: relative;
+}
+
+.header__inner{
+    text-align: center;
+}
+
+.header-title{
+    text-align: center;
+    color: rgb(187, 107, 46);
+}
+
+.header-button{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.change__inner{
+    padding: 1vh 4vh;
+    border: 1px solid grey;
+    background: rgb(219, 218, 218);
+    color: grey;
+    font-size: 2vh;
+}
+

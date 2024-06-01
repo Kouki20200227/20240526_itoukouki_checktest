@@ -1,0 +1,44 @@
+.complete__content{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.backStr{
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 35dvh;
+    color: rgb(245, 245, 245);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.complete__inner{
+    width: 50%;
+    margin: 35dvh auto;
+}
+
+.comment__inner{
+    text-align: center;
+}
+.comment{
+    color: rgb(167, 102, 67);
+    font-size: 4dvh;
+}
+
+.home-button{
+    width: 15%;
+    margin: 10dvh auto;
+}
+.home-button-submit{
+    width: 100%;
+    background: rgb(167, 102, 67);
+    color: white;
+    padding: 1.5dvh 0;
+    border: none;
+}

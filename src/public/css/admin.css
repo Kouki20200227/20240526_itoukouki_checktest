@@ -1,0 +1,101 @@
+.admin__content{
+    max-width:80%;
+    margin: 0 auto;
+}
+
+.section-title{
+    margin: 0 auto;
+    text-align:center;
+    padding: 2dvh 0;
+    color: rgb(158, 158, 158);
+}
+
+.search-form{
+    display: flex;
+    justify-content: space-between;
+    margin: 1dvh 0;
+}
+
+.search--item{
+    width: 100%;
+    padding: 1vh;
+}
+
+/* メールアドレスまたは名前検索 */
+.search-name__email{
+    width: 25%;
+}
+
+/* 性別 */
+.search-gender{
+    width: 6%;
+}
+
+.search-category{
+    width: 15%;
+}
+
+.search-date{
+    width: 10%;
+}
+
+.search-button{
+    width: 6%;
+}
+
+.reset-button{
+    width: 6%;
+}
+
+.admin__item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin__page{
+    width: 20%;
+}
+
+.pagination{
+    text-align: center;
+}
+.pagination li{
+    display: inline-block;
+}
+
+.admin__table {
+    width: 100%;
+    color: black;
+}
+
+.admin__table__inner{
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.admin__table__row{
+    border: 1px solid black;
+}
+
+.admin__table__name{
+    width: 15%;
+}
+
+.admin__table__gender{
+    width: 10%;
+}
+
+.admin__table__email{
+    width: 30%;
+}
+
+.admin__table__category{
+    width: 30%;
+}
+
+.admin__table__detail{
+    width: 15%;
+}
+
+
