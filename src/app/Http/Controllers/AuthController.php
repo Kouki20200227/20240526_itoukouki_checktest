@@ -46,7 +46,24 @@ class AuthController extends Controller
     }
 
     public function search(Request $request){
+        $query = Contact::query();
+
+        if($value = $request->keyword){
+            $query->where('first_name', 'like', "%{value}%");
+        }
+        if($value = $request->gender){
+            $query->where('gender', "{value}");
+        }
+        if ($value = $request->category_id) {
+            $query->where('category_id', "{value}");
+        }
+        if($value = $request->date){
+            $query->where('date', "{value}");
+        }
+
+        $contacts = $query->Paginate(7)->withQueryString();
         $categories = Category::all();
-        $contacts = Contact::with('category')->CategorySearch($request->category_id)->KeywordSearch($request->category_id)->get();
+
+        return view('auth.admin', compact('contacts', 'categories'));
     }
 }

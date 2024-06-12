@@ -9,11 +9,11 @@
     <div class="section-title">
         <h2>Admin</h2>
     </div>
-    <form action="/admin" class="search-from__inner" method="post">
+    <form action="/admin/search" class="search-from__inner" method="get">
         @csrf
         <div class="search-form">
             <div class="search-name__email">
-                <input type="text" class="search--item" name="name-email" value="{{ old('name-email') }}"
+                <input type="text" class="search--item" name="keyword" value="{{ old('keyword') }}"
                     placeholder="名前やメールアドレスを入力してください">
             </div>
             <div class="search-gender">
@@ -35,13 +35,13 @@
                 </select>
             </div>
             <div class="search-date">
-                    <input type="date" class="search--item" name="date" value="2024-01-01">
+                <input type="date" class="search--item" name="date">
             </div>
             <div class="search-button">
                 <button class="search--item" type="submit">検索</button>
             </div>
             <div class="reset-button">
-                <button class="search--item" type="submit" name="riset" value="riset">リセット</button>
+                <button class="search--item" type="submit" name="reset" value="reset">リセット</button>
             </div>
         </div>
     </form>
@@ -52,7 +52,7 @@
             </div>
         </form>
         <div class="admin__page">
-            {{ $contacts->links() }}
+            {{ $contacts->appends(request()->query())->links() }}
         </div>
     </div>
     <div class="admin__table">
@@ -95,11 +95,11 @@
                         <td class="table__gender--item">
                             <div class="table__gender">
                                 @if ($contact['gender'] == '1')
-                                男性
+                                    男性
                                 @elseif($contact['gender'] == '2')
-                                女性
+                                    女性
                                 @elseif($contact['gender'] == '3')
-                                その他
+                                    その他
                                 @endif
                             </div>
                         </td>
@@ -111,7 +111,11 @@
                         </td>
                         <td class="table__category--item">
                             <div class="table__category">
-                                {{ $contact['category_id'] }}
+                                @foreach ($categories as $category)
+                                    @if ($contact['category_id'] == $category['id'])
+                                        {{$category['content']}}
+                                    @endif
+                                @endforeach
                             </div>
                         </td>
                         <td class="table__detail--item">
