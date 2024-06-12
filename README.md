@@ -3,7 +3,7 @@
 環境構築
 
 Dockerビルド
-1.
+1.git@github.com:Kouki20200227/20240526_itoukouki_checktest.git
 2.docker-compose up -d --build
 
 OSの違いはdocker-compose.ymlファイルを編集してください。
